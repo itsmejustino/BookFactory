@@ -1,9 +1,12 @@
 import { Book, User } from '../schemas'
 import { signToken } from '../utils/auth'
 
-const resolvers = {
+export const resolvers = {
     Query:{
-            
+        getSingleUser: async()=>{
+
+
+        }
 
 
     },
