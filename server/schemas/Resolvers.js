@@ -1,8 +1,8 @@
-import { Book, User } from '../models'
-import { signToken } from '../utils/auth'
-import { AuthenticationError } from 'apollo-server-express';
+const { Book, User } = require('../models');
+const { signToken } = require('../utils/auth');
+const { AuthenticationError }= require('apollo-server-express');
 
-export const resolvers = {
+const resolvers = {
     Query:{
         user: async(parent,{ _id })=>{
             const params = _id ? { _id } : {};
@@ -33,3 +33,5 @@ export const resolvers = {
 
 
 }
+
+module.exports = resolvers;

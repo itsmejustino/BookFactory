@@ -1,9 +1,8 @@
-//define the data types of the models for the schema
 
 //import graphql from apollo server
-import { gql } from 'apollo-server-express'
+const {gql} = require('apollo-server-express');
 
-export const typeDefs = gql`
+const typeDefs = gql`
     type Book {
         _id: ID
         authors: [String]
@@ -32,4 +31,5 @@ export const typeDefs = gql`
         saveBook(_id:String, savedBooks:[Book] ): User 
         deleteBook(_id:String, savedBooks:[Book]): User
     }
-`
+`;
+module.exports = typeDefs;
