@@ -31,6 +31,5 @@ export const typeDefs = gql`
         login(username: !String, email: !String, password: !String): User
         saveBook(_id:String, savedBooks:[Book] ): User 
         deleteBook(_id:String, savedBooks:[Book]): User
-        
     }
 `
